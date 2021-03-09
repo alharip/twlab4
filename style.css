@@ -1,0 +1,61 @@
+.gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.gallery__column {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.gallery__column__img-wrapper {
+    position: relative;
+    margin: 10px;
+    max-width: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+.gallery__column__img-wrapper>button {
+    display: none;
+    position: absolute;
+}
+
+.gallery__column__img-wrapper:hover>button {
+    display: block;
+}
+
+@media screen and (max-width: 1050px) {
+    .gallery__column {
+        width: 50%;
+    }
+    .gallery__column:nth-child(3) {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .gallery__column {
+        width: 100%;
+    }
+}
+
+.gallery__column__heart-btn {
+    top: 5px;
+    right: 5px;
+}
+
+.gallery__column__download-btn {
+    bottom: 10px;
+    right: 5px;
+}
+
+.gallery__column__add-collection-btn {
+    bottom: 10px;
+    left: 5px;
+}
