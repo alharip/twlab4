@@ -15,6 +15,7 @@
     position: relative;
     margin: 10px;
     max-width: 100%;
+    font-size: 0;
 }
 
 img {
@@ -24,6 +25,18 @@ img {
 .gallery__column__img-wrapper>button {
     display: none;
     position: absolute;
+    font-size: 16px;
+}
+
+.gallery__column__img-wrapper:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgb(122, 3, 3);
+    opacity: 0.3;
 }
 
 .gallery__column__img-wrapper:hover>button {
